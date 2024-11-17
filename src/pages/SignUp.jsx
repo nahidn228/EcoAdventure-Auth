@@ -8,7 +8,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const { createNewUser, setUser } = useContext(AuthContext);
 
-  const [err, setErr] = useState("");
+  const [err, setErr] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,8 +19,16 @@ const SignUp = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
 
+    if (name.length < 5) {
+      setErr({
+        ...err,
+        name: "Name should be more than 5 character or grater",
+      });
+     
+      return;
+    }
     if (!(password === confirmPassword)) {
-      setErr("Password did not match");
+      setErr({ ...err, password: "Password did not match" });
       return;
     }
 
@@ -56,6 +64,11 @@ const SignUp = () => {
               className="input input-bordered"
               required
             />
+            {err.name && (
+              <p className="text-sm text-red-600 mt-1 font-medium">
+                {err.name}
+              </p>
+            )}
           </div>
           <div className="form-control">
             <label className="label">
@@ -112,8 +125,10 @@ const SignUp = () => {
               className="input input-bordered"
               required
             />
-            {err && (
-              <p className="text-sm text-red-600 mt-1 font-medium"> {err} </p>
+            {err.password && (
+              <p className="text-sm text-red-600 mt-1 font-medium">
+                {err.password}
+              </p>
             )}
           </div>
 

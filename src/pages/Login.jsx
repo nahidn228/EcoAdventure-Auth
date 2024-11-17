@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
   const { signInUser, setUser } = useContext(AuthContext);
+  const [err, setErr] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   const handleSignIn = (e) => {
@@ -22,12 +23,13 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         setUser(user);
+        setErr(null);
         navigate(location?.state ? location.state : "/");
         console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
-        console.log(errorCode);
+        setErr(errorCode);
         setUser(null);
       });
   };
@@ -62,6 +64,9 @@ const Login = () => {
               className="input input-bordered"
               required
             />
+            {err && (
+              <p className="text-sm font-medium text-red-600 mt-1">{err}</p>
+            )}
             <div className="flex justify-between mt-4">
               <div className="form-control">
                 <label className="cursor-pointer justify-start gap-2 label font-semibold text-base">
@@ -85,6 +90,7 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn bg-[#F9A51A]">Login</button>
           </div>
+
           <p className="mt-4 font-medium text-center">
             Don’t have an account?{" "}
             <Link className="underline font-normal text-[#F9A51A]" to="/signUp">
