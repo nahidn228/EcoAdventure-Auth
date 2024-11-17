@@ -66,8 +66,20 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end gap-2">
-        <p>{user && user?.email}</p>
-        <img src={navImg} alt="" />
+        {/* <p>{user && user?.email}</p> */}
+        {user ? (
+          <div className="relative inline-block group">
+            {/* User img */}
+            <img className="w-12 rounded-full" src={user?.photoURL} alt="" />
+            {/* hover user name */}
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+              {user.displayName}
+            </span>
+          </div>
+        ) : (
+          <img src={navImg} alt="" />
+        )}
+
         {user ? (
           <Link
             to=""

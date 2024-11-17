@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const { createNewUser, setUser } = useContext(AuthContext);
+  const { createNewUser, setUser, updateUser } = useContext(AuthContext);
 
   const [err, setErr] = useState({});
 
@@ -14,7 +14,7 @@ const SignUp = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const photoURL = form.photoURL.value;
+    const photoUrl = form.photoUrl.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
@@ -24,7 +24,7 @@ const SignUp = () => {
         ...err,
         name: "Name should be more than 5 character or grater",
       });
-     
+
       return;
     }
     if (!(password === confirmPassword)) {
@@ -35,7 +35,14 @@ const SignUp = () => {
     createNewUser(email, password)
       .then((result) => {
         setUser(result.user);
-        navigate("/");
+
+        updateUser({ displayName: name, photoURL: photoUrl })
+          .then(() => {
+            navigate("/");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
 
         console.log(result.user);
       })
@@ -46,7 +53,7 @@ const SignUp = () => {
         alert(errorCode);
       });
 
-    console.log({ name, photoURL, email, password, confirmPassword });
+    console.log({ name, photoUrl, email, password, confirmPassword });
   };
   return (
     <div className="flex items-center justify-center min-h-screen mt-10">
@@ -79,8 +86,8 @@ const SignUp = () => {
             </label>
             <input
               type="text"
-              name="photoURL"
-              placeholder="Enter your name"
+              name="photoUrl"
+              placeholder="Enter your photo Url"
               className="input input-bordered"
               required
             />
