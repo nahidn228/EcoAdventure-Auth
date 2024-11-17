@@ -34,8 +34,8 @@ const SignUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         // const errorMessage = error.message;
-        setUser(errorCode);
-        console.log(errorCode);
+        // setUser(errorCode);
+        alert(errorCode);
       });
 
     console.log({ name, photoURL, email, password, confirmPassword });
