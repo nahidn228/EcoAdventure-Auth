@@ -17,13 +17,11 @@ import "swiper/css/effect-fade"; // Import styles for fade effect (optional)
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import NavBar from "./NavBar";
 
 const SliderBanner = ({ data }) => {
   console.log(data);
   return (
     <div className="mb-10">
-      <NavBar></NavBar>
       <Swiper
         className="w-11/12 mx-auto lg:h-[800px] mt-10"
         // install Swiper modules
