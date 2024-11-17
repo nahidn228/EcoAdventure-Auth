@@ -27,14 +27,14 @@ const NavBar = () => {
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
-        // Sign-out successful.
+        alert("LogOut successful.");
       })
-      .catch((error) => {
+      .catch(() => {
         // An error happened.
       });
   };
   return (
-    <div className="navbar bg-white/30 backdrop-blur-xl ">
+    <div className="navbar  absolute z-50 backdrop-blur-xl top-0 left-0 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -77,7 +77,7 @@ const NavBar = () => {
             </span>
           </div>
         ) : (
-          <img src={navImg} alt="" />
+          <img className="rounded-full" src={navImg} alt="" />
         )}
 
         {user ? (

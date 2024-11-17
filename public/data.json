@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "title": "Amazon Rainforest Expedition",
+    "image": "https://i.ibb.co.com/tYB210N/Amazon-Rainforest-Expedition.jpg",
+    "categoryName": "Jungle Adventure",
+    "shortDescription": "Explore the heart of the Amazon Rainforest with guided eco-tours.",
+    "adventureCost": 1500,
+    "bookingAvailability": true,
+    "location": "Amazon Basin, Brazil",
+    "duration": "7 days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Guided tours",
+      "Eco-lodge accommodation",
+      "Meals",
+      "First-aid kit",
+      "Binoculars"
+    ],
+    "ecoFriendlyFeatures": [
+      "Solar-powered facilities",
+      "Plastic-free packaging",
+      "Eco-friendly transportation"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Pack lightweight clothing",
+      "Carry insect repellent",
+      "Follow the guide's safety instructions"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Alaskan Glacier Hiking",
+    "image": "https://i.ibb.co.com/CQ7h5tx/Alaskan-Glacier-Hiking.jpg",
+    "categoryName": "Mountain Adventure",
+    "shortDescription": "Discover breathtaking views while trekking on Alaska's glaciers.",
+    "adventureCost": 1200,
+    "bookingAvailability": true,
+    "location": "Juneau, Alaska, USA",
+    "duration": "5 days",
+    "adventureLevel": "Challenging",
+    "includedItems": [
+      "Professional guide",
+      "Ice trekking gear",
+      "Meals and snacks",
+      "Safety equipment"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave-no-trace policy",
+      "Recyclable gear",
+      "Support for local communities"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Wear sturdy hiking boots",
+      "Bring a reusable water bottle",
+      "Stay hydrated"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Great Barrier Reef Snorkeling",
+    "image": "https://i.ibb.co.com/NnPtZ2D/Great-Barrier-Reef-Snorkeling.jpg",
+    "categoryName": "Water Adventure",
+    "shortDescription": "Dive into the world's largest coral reef system.",
+    "adventureCost": 800,
+    "bookingAvailability": true,
+    "location": "Queensland, Australia",
+    "duration": "3 days",
+    "adventureLevel": "Easy",
+    "includedItems": [
+      "Snorkeling gear",
+      "Marine guide",
+      "Underwater photography session",
+      "Light refreshments"
+    ],
+    "ecoFriendlyFeatures": [
+      "Coral-safe sunscreen provided",
+      "Eco-certified boats",
+      "Marine conservation donations included"
+    ],
+    "maxGroupSize": 15,
+    "specialInstructions": [
+      "Avoid touching corals",
+      "Apply provided sunscreen",
+      "Follow the marine guide"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Sahara Desert Camping",
+    "image": "https://i.ibb.co.com/g3vCk1K/Sahara-Desert-Camping.jpg",
+    "categoryName": "Desert Adventure",
+    "shortDescription": "Experience the vastness of the Sahara with eco-conscious camping.",
+    "adventureCost": 1000,
+    "bookingAvailability": true,
+    "location": "Merzouga, Morocco",
+    "duration": "4 days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Camel ride",
+      "Tent accommodation",
+      "Traditional meals",
+      "Campfire activities"
+    ],
+    "ecoFriendlyFeatures": [
+      "Bio-degradable utensils",
+      "Solar lanterns",
+      "Water conservation practices"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Dress in layers for temperature changes",
+      "Bring a hat and sunglasses",
+      "Stay hydrated"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Patagonia Wildlife Adventure",
+    "image": "https://i.ibb.co.com/6gqBGrT/Patagonia-Wildlife-Adventure.jpg",
+    "categoryName": "Wildlife Adventure",
+    "shortDescription": "Discover the pristine beauty of Patagonia with wildlife experts.",
+    "adventureCost": 1800,
+    "bookingAvailability": true,
+    "location": "Patagonia, Argentina/Chile",
+    "duration": "6 days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Expert wildlife guides",
+      "Camping gear",
+      "Meals",
+      "Photography sessions"
+    ],
+    "ecoFriendlyFeatures": [
+      "Zero-waste camping",
+      "Reusable water bottles",
+      "Local, organic food"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Wear weather-appropriate clothing",
+      "Bring a camera for wildlife photography",
+      "Adhere to wildlife viewing rules"
+    ]
+  }
+]
