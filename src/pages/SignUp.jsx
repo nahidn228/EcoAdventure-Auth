@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const { createNewUser, setUser } = useContext(AuthContext);
 
   const [err, setErr] = useState("");
@@ -26,6 +27,8 @@ const SignUp = () => {
     createNewUser(email, password)
       .then((result) => {
         setUser(result.user);
+        navigate("/");
+
         console.log(result.user);
       })
       .catch((error) => {
