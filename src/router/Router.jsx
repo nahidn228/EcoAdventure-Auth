@@ -6,6 +6,7 @@ import Error from "../pages/Error";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import PrivateRoute from "./privateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: (
+          <PrivateRoute>
+            <Contact></Contact>
+          </PrivateRoute>
+        ),
       },
     ],
   },
