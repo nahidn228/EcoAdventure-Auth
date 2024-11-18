@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaClock, FaMapMarkerAlt, FaTree, FaUsers } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
 import NavBar from "./../components/NavBar";
+import Footer from "../components/Footer";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -35,11 +36,11 @@ const CardDetails = () => {
       <header>
         <NavBar></NavBar>
       </header>
-      <main className="my-20">
-        <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
+      <main className="my-10">
+        <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden animate__animated animate__fadeIn">
           {/* Image */}
           <div className="relative">
-            <img src={image} alt={title} className="w-full h-64 object-cover" />
+            <img src={image} alt={title} className="w-full h-auto object-cover" />
             <div className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
               {categoryName}
             </div>
@@ -56,7 +57,7 @@ const CardDetails = () => {
             <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
 
             {/* Location and Duration */}
-            <div className="flex items-center gap-4 text-gray-600 my-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-4 text-gray-600 my-3 ">
               <div className="flex items-center gap-1">
                 <FaMapMarkerAlt className="text-green-500" />
                 <span>{location}</span>
@@ -124,6 +125,9 @@ const CardDetails = () => {
           </div>
         </div>
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

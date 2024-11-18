@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="mt-8">
@@ -32,7 +33,9 @@ const Footer = () => {
             </h6>
             <ul className="space-y-3">
               <li>
-                <a className="hover:underline">Home</a>
+                <Link to="/" className="hover:underline">
+                  Home
+                </Link>
               </li>
               <li>
                 <a className="hover:underline">Destinations</a>

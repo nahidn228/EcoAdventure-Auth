@@ -1,11 +1,15 @@
-
+import { useLoaderData } from "react-router-dom";
+import Adventure from "../components/Adventure";
 
 const About = () => {
-    return (
-        <div>
-            <h1 className="text-xl">This is About Us</h1>
-        </div>
-    );
+  const data = useLoaderData();
+  return (
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      {data?.map((card) => (
+        <Adventure key={card.id} card={card}></Adventure>
+      ))}
+    </div>
+  );
 };
 
 export default About;

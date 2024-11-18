@@ -7,19 +7,64 @@ const NavBar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : "text-white py-2 px-4 rounded-lg"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink
+          to="/place"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : "text-white py-2 px-4 rounded-lg"
+          }
+        >
+          Places
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : "text-white py-2 px-4 rounded-lg"
+          }
+        >
+          Contact
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : "text-white py-2 px-4 rounded-lg"
+          }
+        >
+          Login
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/signUp">Sign Up</NavLink>
+        <NavLink
+          to="/signUp"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : "text-white py-2 px-4 rounded-lg"
+          }
+        >
+          Sign Up
+        </NavLink>
       </li>
     </>
   );
@@ -60,7 +105,7 @@ const NavBar = () => {
             {navLinks}
           </ul>
         </div>
-        <div className="flex items-center space-x-3 mb-4">
+        <div className="hidden lg:flex items-center space-x-3 mb-4">
           <svg
             width="50"
             height="50"
