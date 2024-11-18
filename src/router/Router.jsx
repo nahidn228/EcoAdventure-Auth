@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Category from "../components/TestimonialReviews";
-import TestimonialReviews from "../components/TestimonialReviews";
+import {
+  default as Category,
+  default as TestimonialReviews,
+} from "../components/TestimonialReviews";
 import MainLayout from "../layout/MainLayout";
 import About from "../pages/About";
 import CardDetails from "../pages/CardDetails";
@@ -8,8 +10,10 @@ import Contact from "../pages/Contact";
 import Error from "../pages/Error";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import MyProfile from "../pages/MyProfile";
 import SignUp from "../pages/SignUp";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import UpdateInfo from "../components/UpdateInfo";
 
 const router = createBrowserRouter([
   {
@@ -49,9 +53,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/updateInfo",
+        element: <UpdateInfo></UpdateInfo>,
+      },
+      {
+        path: "/myProfile",
         element: (
           <PrivateRoute>
-            <Contact></Contact>
+            <MyProfile></MyProfile>
           </PrivateRoute>
         ),
       },

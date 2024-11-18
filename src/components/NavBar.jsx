@@ -66,6 +66,18 @@ const NavBar = () => {
           Sign Up
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/myProfile"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
+              : " py-2 px-4 rounded-lg"
+          }
+        >
+          My Profile
+        </NavLink>
+      </li>
     </>
   );
 

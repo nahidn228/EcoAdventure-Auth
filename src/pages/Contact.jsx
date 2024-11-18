@@ -169,7 +169,7 @@ const Contact = () => {
               <p className="font-semibold text-lg">Emily Carter</p>
               <p className="text-sm text-gray-600">
                 “This was hands down the best eco-adventure I’ve ever had! I
-                feel so rejuvenated.” ⭐⭐⭐⭐⭐
+                feel so rejuvenated.” <br /> ⭐⭐⭐⭐⭐
               </p>
             </div>
           </div>
@@ -184,7 +184,7 @@ const Contact = () => {
               <p className="font-semibold text-lg">Ryan Garcia</p>
               <p className="text-sm text-gray-600">
                 “A magical experience! The focus on sustainability was
-                inspiring.” ⭐⭐⭐⭐⭐
+                inspiring.” <br /> ⭐⭐⭐⭐⭐
               </p>
             </div>
           </div>
@@ -199,7 +199,7 @@ const Contact = () => {
               <p className="font-semibold text-lg">Sophia White</p>
               <p className="text-sm text-gray-600">
                 “Everything from the views to the activities exceeded my
-                expectations. Highly recommend!” ⭐⭐⭐⭐½
+                expectations. Highly recommend!” <br /> ⭐⭐⭐⭐
               </p>
             </div>
           </div>
@@ -214,7 +214,7 @@ const Contact = () => {
               <p className="font-semibold text-lg">Liam Brown</p>
               <p className="text-sm text-gray-600">
                 “I loved the balance between adventure and relaxation. A
-                must-try!” ⭐⭐⭐⭐
+                must-try!” <br /> ⭐⭐⭐⭐
               </p>
             </div>
           </div>
