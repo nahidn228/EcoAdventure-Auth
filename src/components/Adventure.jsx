@@ -43,7 +43,7 @@ const Adventure = ({ card }) => {
         </div>
 
         {/* Button */}
-        <div className="mt-4">
+        <div className="mt-4 mb-2">
           <Link
             to={`/experience/${card.id}`}
             className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg transform transition-transform hover:scale-105"

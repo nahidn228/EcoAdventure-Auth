@@ -12,7 +12,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
-              : "text-white py-2 px-4 rounded-lg"
+              : " py-2 px-4 rounded-lg"
           }
         >
           Home
@@ -24,7 +24,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
-              : "text-white py-2 px-4 rounded-lg"
+              : " py-2 px-4 rounded-lg"
           }
         >
           Places
@@ -36,7 +36,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
-              : "text-white py-2 px-4 rounded-lg"
+              : " py-2 px-4 rounded-lg"
           }
         >
           Contact
@@ -48,7 +48,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
-              : "text-white py-2 px-4 rounded-lg"
+              : " py-2 px-4 rounded-lg"
           }
         >
           Login
@@ -60,7 +60,7 @@ const NavBar = () => {
           className={({ isActive }) =>
             isActive
               ? "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105"
-              : "text-white py-2 px-4 rounded-lg"
+              : " py-2 px-4 rounded-lg"
           }
         >
           Sign Up
@@ -100,7 +100,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-gradient-to-r from-green-800 to-teal-700  rounded-box z-50 mt-3 w-52 p-2 shadow"
           >
             {navLinks}
           </ul>
@@ -126,17 +126,25 @@ const NavBar = () => {
       </div>
       <div className="navbar-end gap-2">
         {/* <p>{user && user?.email}</p> */}
-        {user ? (
+        {user && user?.photoURL ? (
           <div className="relative inline-block group">
             {/* User img */}
-            <img className="w-12 rounded-full" src={user?.photoURL} alt="" />
+            <img
+              className="w-10 h-10 rounded-full"
+              src={user?.photoURL}
+              alt=""
+            />
             {/* hover user name */}
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10">
               {user.displayName}
             </span>
           </div>
         ) : (
-          <img className="rounded-full" src={navImg} alt="" />
+          <div className="relative inline-block group">
+            {/* default image */}
+            <img className="rounded-full" src={navImg} alt="" />
+            {/* hover user name */}
+          </div>
         )}
 
         {user ? (

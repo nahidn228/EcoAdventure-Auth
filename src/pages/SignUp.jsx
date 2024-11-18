@@ -27,6 +27,20 @@ const SignUp = () => {
 
       return;
     }
+    if (password.length < 6) {
+      setErr({
+        ...err,
+        passwordLength: "Password must be 6 character or grater",
+      });
+      return;
+    }
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      alert(
+        "Password contains Must have an Uppercase & Lowercase  letter and Length must be at least 6 character"
+      );
+      return;
+    }
     if (!(password === confirmPassword)) {
       setErr({ ...err, password: "Password did not match" });
       return;
@@ -35,10 +49,14 @@ const SignUp = () => {
     createNewUser(email, password)
       .then((result) => {
         setUser(result.user);
+        //clear form
+        e.target.reset();
 
         updateUser({ displayName: name, photoURL: photoUrl })
           .then(() => {
             navigate("/");
+            //clear form
+            e.target.reset();
           })
           .catch((err) => {
             console.log(err);
@@ -135,6 +153,11 @@ const SignUp = () => {
             {err.password && (
               <p className="text-sm text-red-600 mt-1 font-medium">
                 {err.password}
+              </p>
+            )}
+            {err.passwordLength && (
+              <p className="text-sm text-red-600 mt-1 font-medium">
+                {err.passwordLength}
               </p>
             )}
           </div>

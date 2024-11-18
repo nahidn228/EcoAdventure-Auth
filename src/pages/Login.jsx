@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser } = useContext(AuthContext);
+  const { signInUser, setUser, signInWithGoogle } = useContext(AuthContext);
   const [err, setErr] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,12 +24,27 @@ const Login = () => {
         const user = userCredential.user;
         setUser(user);
         setErr(null);
+        //clear form
+        e.target.reset();
         navigate(location?.state ? location.state : "/");
         console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
         setErr(errorCode);
+        setUser(null);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        navigate(location?.state ? location.state : "/");
+        console.log(result.user);
+      })
+      .catch((err) => {
+        console.log(err.code);
         setUser(null);
       });
   };
@@ -88,7 +103,9 @@ const Login = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105">Login</button>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105">
+              Login
+            </button>
           </div>
 
           <p className="mt-4 font-medium text-center">
@@ -100,7 +117,10 @@ const Login = () => {
         </form>
         <div className="p-10">
           <div className="divider font-semibold my-6">Or</div>
-          <button className="btn btn-outline btn-circle w-full mb-6 flex">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-outline btn-circle w-full mb-6 flex"
+          >
             <FcGoogle />
             Continue with Google
           </button>
