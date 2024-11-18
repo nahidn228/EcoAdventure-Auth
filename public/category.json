@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "category": "Testimonials",
+    "name": "Emily Carter",
+    "photo": "https://via.placeholder.com/150",
+    "quote": "This was hands down the best eco-adventure I’ve ever had! I feel so rejuvenated.",
+    "rating": 5,
+    "date": "2024-11-05"
+  },
+  {
+    "id": 2,
+    "category": "Testimonials",
+    "name": "Ryan Garcia",
+    "photo": "https://via.placeholder.com/150",
+    "quote": "A magical experience! The focus on sustainability was inspiring.",
+    "rating": 5,
+    "date": "2024-10-22"
+  },
+  {
+    "id": 3,
+    "category": "Testimonials",
+    "name": "Sophia White",
+    "photo": "https://via.placeholder.com/150",
+    "quote": "Everything from the views to the activities exceeded my expectations. Highly recommend!",
+    "rating": 4.5,
+    "date": "2024-09-12"
+  },
+  {
+    "id": 4,
+    "category": "Testimonials",
+    "name": "Liam Brown",
+    "photo": "https://via.placeholder.com/150",
+    "quote": "I loved the balance between adventure and relaxation. A must-try!",
+    "rating": 4,
+    "date": "2024-08-15"
+  },
+  {
+    "id": 1,
+    "category": "Reviews",
+    "name": "James Miller",
+    "title": "Spectacular Hiking Trails!",
+    "photo": "https://via.placeholder.com/150",
+    "review": "The hiking trails were well-marked and offered stunning views of the mountains and forests. The guides were friendly and knowledgeable about local flora and fauna. The eco-conscious approach added a unique and fulfilling touch to the entire experience.",
+    "rating": 5,
+    "date": "2024-11-07"
+  },
+  {
+    "id": 2,
+    "category": "Reviews",
+    "name": "Olivia Wilson",
+    "title": "Great for Families",
+    "photo": "https://via.placeholder.com/150",
+    "review": "I visited with my kids, and they had an amazing time! The interactive eco-workshops kept them entertained while teaching them about the environment. The accommodations were cozy and family-friendly.",
+    "rating": 4.5,
+    "date": "2024-10-14"
+  },
+  {
+    "id": 3,
+    "category": "Reviews",
+    "name": "William Johnson",
+    "title": "Relaxing and Sustainable",
+    "photo": "https://via.placeholder.com/150",
+    "review": "The resort was a peaceful escape from the hustle and bustle of daily life. I appreciated the solar-powered amenities and organic food options. The team went above and beyond to ensure everything was sustainable.",
+    "rating": 4.8,
+    "date": "2024-09-20"
+  },
+  {
+    "id": 4,
+    "category": "Reviews",
+    "name": "Ava Martinez",
+    "title": "Thrilling Safari Experience!",
+    "photo": "https://via.placeholder.com/150",
+    "review": "The wildlife safari was a once-in-a-lifetime experience! We spotted rare animals, and the guides shared fascinating insights about conservation. It's clear that the organizers truly care about preserving the ecosystem.",
+    "rating": 5,
+    "date": "2024-08-28"
+  },
+  {
+    "id": 5,
+    "category": "Reviews",
+    "name": "Noah Anderson",
+    "title": "Good but Can Improve",
+    "photo": "https://via.placeholder.com/150",
+    "review": "The activities were enjoyable, and the overall concept was excellent. However, I think the check-in process could be smoother. Also, providing a map of the trails upfront would have been helpful.",
+    "rating": 3.5,
+    "date": "2024-07-10"
+  }
+]

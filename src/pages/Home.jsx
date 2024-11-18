@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Adventure from "../components/Adventure";
 import SliderB from "../components/SliderB";
 
@@ -19,13 +19,13 @@ const Home = () => {
         <SliderB data={data}></SliderB>
       </section>
       <section>
-        <div className='py-6'>
-        <h4 className="text-4xl font-bold  text-center">
-          Adventure Experiences
-        </h4>
-        <p className="text-2xl  italic font-semibold text-center mb-4">
-          Explore breathtaking landscapes, wildlife, and more!
-        </p>
+        <div className="py-6">
+          <h4 className="text-4xl font-bold  text-center">
+            Adventure Experiences
+          </h4>
+          <p className="text-2xl  italic font-semibold text-center mb-4">
+            Explore breathtaking landscapes, wildlife, and more!
+          </p>
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           {experience?.map((card) => (
@@ -37,6 +37,10 @@ const Home = () => {
       {/* {data.map((echo) => (
         <SliderBanner key={echo.id} echo={echo}></SliderBanner>
       ))} */}
+
+      <section className="my-10">
+        <Outlet></Outlet>
+      </section>
     </div>
   );
 };

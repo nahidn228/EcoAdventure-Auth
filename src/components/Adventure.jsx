@@ -14,7 +14,7 @@ const Adventure = ({ card }) => {
   //           Explore Now
   //         </Link>
   return (
-    <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 duration-300">
+    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105 duration-300">
       {/* Image Section */}
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -50,7 +50,6 @@ const Adventure = ({ card }) => {
           >
             Explore Now
           </Link>
-         
         </div>
       </div>
     </div>
