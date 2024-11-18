@@ -140,7 +140,7 @@ const SignUp = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn bg-[#F9A51A] text-base-00">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105">
               Create an account
             </button>
           </div>
@@ -154,7 +154,7 @@ const SignUp = () => {
             Already have an account?{" "}
             <Link
               type="button"
-              className="underline font-normal text-[#F9A51A]"
+              className="underline font-normal text-blue-800"
               to="/login"
             >
               Login

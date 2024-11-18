@@ -72,7 +72,7 @@ const Login = () => {
                 <label className="cursor-pointer justify-start gap-2 label font-semibold text-base">
                   <input
                     type="checkbox"
-                    className="checkbox checkbox-warning"
+                    className="checkbox checkbox-primary checkbox-xs"
                   />
                   <span className="label-text">Remember me</span>
                 </label>
@@ -88,12 +88,12 @@ const Login = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#F9A51A]">Login</button>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-semibold py-2 px-6 shadow-lg transform transition-transform hover:scale-105">Login</button>
           </div>
 
           <p className="mt-4 font-medium text-center">
             Don’t have an account?{" "}
-            <Link className="underline font-normal text-[#F9A51A]" to="/signUp">
+            <Link className="underline font-normal text-blue-800" to="/signUp">
               Create an account
             </Link>
           </p>

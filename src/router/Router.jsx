@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import About from "../pages/About";
+import CardDetails from "../pages/CardDetails";
 import Contact from "../pages/Contact";
 import Error from "../pages/Error";
 import Home from "../pages/Home";
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("data.json"),
+        loader: () => fetch("/data.json"),
         element: <Home></Home>,
       },
       {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/experience/:id",
+    loader: () => fetch("/data.json"),
+    element: <CardDetails></CardDetails>,
   },
   {
     path: "*",

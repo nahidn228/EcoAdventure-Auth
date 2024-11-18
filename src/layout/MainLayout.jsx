@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -8,7 +9,8 @@ const MainLayout = () => {
       <header>
         <NavBar></NavBar>
       </header>
-      <main className="min-h-screen">
+      <main className="min-h-screen ">
+        <Banner></Banner>
         <Outlet></Outlet>
       </main>
       <footer>
