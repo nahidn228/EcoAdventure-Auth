@@ -163,7 +163,7 @@ const Faq = () => {
                 Plan Your Adventure
               </h3>
               <p className="text-sm mt-2">
-                Discover eco-friendly trips that you'll never forget.
+                Discover eco-friendly trips that you will never forget.
               </p>
             </div>
           </div>

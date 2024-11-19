@@ -1,4 +1,6 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../provider/AuthProvider";
 
 const ForgetPass = () => {
@@ -12,11 +14,11 @@ const ForgetPass = () => {
 
     resetPassword(emailField)
       .then(() => {
-        alert("Password reset email sent!");
+        toast.info("Password reset email sent!");
         // ..
       })
       .catch((error) => {
-        alert(error.code);
+        toast.error(error.code);
       });
   };
   return (

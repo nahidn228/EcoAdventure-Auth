@@ -4,6 +4,8 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Snowfall from "react-snowfall";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
@@ -36,7 +38,9 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
         console.log(user);
 
-        alert(`${user?.displayName} You are successfullY Logged-in ! 🎉`);
+        toast.success(
+          `${user?.displayName} You are successfullY Logged-in ! 🎉`
+        );
       })
       .catch((error) => {
         const errorCode = error.code;

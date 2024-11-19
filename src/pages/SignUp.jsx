@@ -3,8 +3,10 @@ import { Helmet } from "react-helmet";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";
 import { Snowfall } from "react-snowfall";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -39,7 +41,7 @@ const SignUp = () => {
     }
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      alert(
+      toast.error(
         "Password contains Must have an Uppercase & Lowercase  letter and Length must be at least 6 character"
       );
       return;
@@ -60,7 +62,7 @@ const SignUp = () => {
             navigate("/");
             //clear form
             e.target.reset();
-            alert(`${name} Welcome to Eco-Adventure ! 🎉`);
+            toast.success(`${name} Welcome to Eco-Adventure ! 🎉`);
           })
           .catch((err) => {
             console.log(err);
@@ -72,14 +74,14 @@ const SignUp = () => {
         const errorCode = error.code;
         // const errorMessage = error.message;
         // setUser(errorCode);
-        alert(errorCode);
+        toast(errorCode);
       });
 
     console.log({ name, photoUrl, email, password, confirmPassword });
   };
   return (
     <>
-     <Snowfall snowflakeCount={100} />
+      <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title> Sign-Up - Eco-Adventure</title>

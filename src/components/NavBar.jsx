@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import navImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
 const NavBar = () => {
@@ -85,7 +87,7 @@ const NavBar = () => {
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
-        alert("LogOut successful.");
+        toast.warn("LogOut successful.");
       })
       .catch(() => {
         // An error happened.

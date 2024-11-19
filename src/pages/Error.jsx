@@ -10,7 +10,6 @@ const Error = () => {
       {/* Snowfall effect */}
       <Snowfall snowflakeCount={150} />
 
-      {/* Helmet for SEO */}
       <Helmet>
         <meta charSet="utf-8" />
         <title>Error - Page Not Found</title>
