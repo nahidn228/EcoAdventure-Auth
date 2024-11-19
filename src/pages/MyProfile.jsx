@@ -11,8 +11,7 @@ import "swiper/css/scrollbar";
 import { AuthContext } from "../provider/AuthProvider";
 
 const MyProfile = () => {
-  const {  user } = useContext(AuthContext);
-
+  const { user } = useContext(AuthContext);
 
   return (
     <div>
@@ -20,7 +19,13 @@ const MyProfile = () => {
         <div className="text-center mb-8">
           {/* Welcome Title */}
           <h1 className="text-4xl font-semibold text-gray-700 animate__animated animate__fadeInUp">
-            {user && user?.displayName ? <p>{user?.displayName}, Your Eco-Adventure Profile</p>  : ""}
+            {user && user?.displayName ? (
+              <p>
+                {user?.displayName}, <br /> Your Eco-Adventure Profile ! 🎉
+              </p>
+            ) : (
+              ""
+            )}
           </h1>
         </div>
 
@@ -61,7 +66,6 @@ const MyProfile = () => {
             {/* Update Button */}
             <Link
               to="/updateInfo"
-              
               className="btn btn-primary p-4 rounded-full shadow-lg mt-4 animate__animated animate__fadeIn animate__delay-2s"
             >
               <FaEdit className="mr-2" />

@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const UpdateInfo = () => {
   const { updateUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleUpdateProfile = (e) => {
     e.preventDefault();
 
@@ -13,6 +15,8 @@ const UpdateInfo = () => {
       .then(() => {
         //clear form
         e.target.reset();
+
+        navigate("/myProfile");
       })
       .catch((err) => {
         console.log(err);

@@ -5,7 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser, signInWithGoogle,setSendEmail } = useContext(AuthContext);
+  const { signInUser, setUser, signInWithGoogle, setSendEmail } =
+    useContext(AuthContext);
   const [err, setErr] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,8 +17,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     //send email to forget password route
-    setSendEmail(email)
-    
+    setSendEmail(email);
 
     console.log(email, password);
 
@@ -31,6 +31,8 @@ const Login = () => {
         e.target.reset();
         navigate(location?.state ? location.state : "/");
         console.log(user);
+
+        alert(`${user?.displayName} You are successfullY Logged-in ! 🎉`);
       })
       .catch((error) => {
         const errorCode = error.code;

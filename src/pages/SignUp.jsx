@@ -57,6 +57,7 @@ const SignUp = () => {
             navigate("/");
             //clear form
             e.target.reset();
+            alert(`${name} Welcome to Eco-Adventure ! 🎉`);
           })
           .catch((err) => {
             console.log(err);
