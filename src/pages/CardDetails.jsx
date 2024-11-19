@@ -12,6 +12,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavBar from "./../components/NavBar";
 import { Helmet } from "react-helmet";
+import { Snowfall } from "react-snowfall";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -62,6 +63,7 @@ const CardDetails = () => {
 
   return (
     <div>
+       <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>{`${categoryName} - Eco-Adventure`}</title>

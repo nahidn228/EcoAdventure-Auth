@@ -10,12 +10,14 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet";
+import { Snowfall } from "react-snowfall";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div>
+       <Snowfall snowflakeCount={100} />
        <Helmet>
         <meta charSet="utf-8" />
         <title>{`${user?.displayName} - Eco-Adventure`}</title>

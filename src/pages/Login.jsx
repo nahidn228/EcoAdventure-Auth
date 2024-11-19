@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Snowfall from "react-snowfall";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
@@ -59,6 +59,7 @@ const Login = () => {
   };
   return (
     <>
+      <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Login - Eco-Adventure</title>
@@ -163,9 +164,9 @@ const Login = () => {
               <FcGoogle />
               Continue with Google
             </button>
-            <button className="btn btn-outline btn-circle w-full">
+            {/* <button className="btn btn-outline btn-circle w-full">
               <FaGithub /> Continue with Github
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

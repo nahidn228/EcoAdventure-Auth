@@ -8,10 +8,12 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Snowfall } from "react-snowfall";
 
 const Contact = () => {
   return (
     <div>
+       <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Contact - Eco-Adventure</title>
@@ -19,7 +21,7 @@ const Contact = () => {
       </Helmet>
       <div className="container mx-auto px-6 py-12">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Contact EcoAdventure
+          About Eco-Adventure
         </h1>
         <p className="text-lg text-gray-700 mb-6">
           Welcome to EcoAdventure! We are thrilled that you are interested in

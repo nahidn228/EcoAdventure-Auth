@@ -31,15 +31,13 @@ const Banner = () => {
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-6">
             Get in Touch with Eco-Adventure
           </h1>
-        ) 
-        : 
-        
-         (
+        ) : (
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-6">
             {path == "/place"
               ? "Explore our exciting Eco-Adventure packages today!"
-              :  `Welcome
-        ${path == "/myProfile"
+              : `Welcome
+        ${
+          path == "/myProfile"
             ? `${user?.displayName} ! 🎉`
             : "to Echo-Adventure"
         }`}

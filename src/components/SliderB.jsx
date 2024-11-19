@@ -14,10 +14,12 @@ import {
   import "swiper/css/navigation";
   import "swiper/css/pagination";
   import "swiper/css/scrollbar";
+import { Snowfall } from "react-snowfall";
 
 const SliderB = ({ data }) => {
   return (
     <div className="mb-10">
+       <Snowfall snowflakeCount={100} />
       <Swiper
         className="w-11/12 mx-auto lg:h-[800px] mt-10"
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
