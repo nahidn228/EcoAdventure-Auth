@@ -1,4 +1,4 @@
-# Eco-Adventure  🌿✨
+# Eco-Adventure 🌿✨
 
 Welcome to Eco-Adventure Experiences, a blog website designed to showcase eco-friendly travel adventures! From mountain treks to ocean dives, this platform provides detailed information about various eco-adventures and empowers users to consult with experts for personalized guidance.
 
@@ -104,4 +104,5 @@ Update user information
 ## 🔗 Links
 
 Live Site: [Eco-Adventure](https://fusiondeck-228.web.app/)
+
 GitHub Repo: [GitHub Repository](https://github.com/programming-hero-web-course1/b10-a9-authentication-nahidn228)

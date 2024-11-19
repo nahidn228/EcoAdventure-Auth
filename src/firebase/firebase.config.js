@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC0iAR2--_lrS9KNJYzmzKNlFCMon0aNBw",
-  authDomain: "fusiondeck-228.firebaseapp.com",
-  projectId: "fusiondeck-228",
-  storageBucket: "fusiondeck-228.firebasestorage.app",
-  messagingSenderId: "437886437620",
-  appId: "1:437886437620:web:34847c0b051671c42fb6a1"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
