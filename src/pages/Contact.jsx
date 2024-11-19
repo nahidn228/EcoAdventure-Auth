@@ -2,6 +2,7 @@ import "animate.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Helmet } from "react-helmet";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
@@ -11,6 +12,11 @@ import "swiper/css/scrollbar";
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact - Eco-Adventure</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="container mx-auto px-6 py-12">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Contact EcoAdventure
@@ -25,9 +31,9 @@ const Contact = () => {
         </p>
         <p className="text-lg text-gray-700 mb-6">
           If you have any questions, need assistance, or want to learn more
-          about our eco-conscious travel options, do not hesitate to reach out to
-          us. We are committed to ensuring that your experience with EcoAdventure
-          is seamless and memorable.
+          about our eco-conscious travel options, do not hesitate to reach out
+          to us. We are committed to ensuring that your experience with
+          EcoAdventure is seamless and memorable.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">

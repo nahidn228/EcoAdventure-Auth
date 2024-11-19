@@ -11,6 +11,7 @@ import {
 import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavBar from "./../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -61,6 +62,11 @@ const CardDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{`${categoryName} - Eco-Adventure`}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <header>
         <NavBar></NavBar>
       </header>

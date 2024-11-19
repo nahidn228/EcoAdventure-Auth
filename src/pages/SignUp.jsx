@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -75,6 +76,13 @@ const SignUp = () => {
     console.log({ name, photoUrl, email, password, confirmPassword });
   };
   return (
+    <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title> Sign-Up - Eco-Adventure</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+    
     <div className="flex items-center justify-center min-h-screen mt-10">
       <div className="card  w-full max-w-lg shrink-0 ">
         <form onSubmit={handleSubmit} className="card-body border-2 p-10">
@@ -197,6 +205,7 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

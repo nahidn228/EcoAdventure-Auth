@@ -9,12 +9,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div>
+       <Helmet>
+        <meta charSet="utf-8" />
+        <title>{`${user?.displayName} - Eco-Adventure`}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="container mx-auto p-4 mt-10">
         <div className="text-center mb-8">
           {/* Welcome Title */}

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Outlet, useLoaderData } from "react-router-dom";
 import Adventure from "../components/Adventure";
+import Faq from "../components/Faq";
 import SliderB from "../components/SliderB";
 
 const Home = () => {
@@ -14,6 +16,11 @@ const Home = () => {
   console.log(experience);
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home - Eco-Adventure</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <section className="mt-10">
         {/* <SliderBanner data={data}></SliderBanner> */}
         <SliderB data={data}></SliderB>
@@ -40,6 +47,9 @@ const Home = () => {
 
       <section className="my-10">
         <Outlet></Outlet>
+      </section>
+      <section>
+        <Faq></Faq>
       </section>
     </div>
   );

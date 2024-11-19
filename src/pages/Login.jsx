@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser, setUser, signInWithGoogle, setSendEmail } =
@@ -54,6 +55,13 @@ const Login = () => {
       });
   };
   return (
+    <>
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login - Eco-Adventure</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+    
     <div className="flex items-center justify-center min-h-screen mt-10">
       <div className="card  w-full max-w-lg shrink-0 ">
         <form onSubmit={handleSignIn} className="card-body border-2 p-10">
@@ -135,6 +143,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
