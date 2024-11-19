@@ -5,6 +5,15 @@ import {
   FaQuestionCircle,
   FaUserFriends,
 } from "react-icons/fa";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Faq = () => {
   //     <section className="max-w-4xl mx-auto py-16 px-4">
@@ -144,20 +153,96 @@ const Faq = () => {
         </div>
 
         {/* Image Section */}
-        <div className="relative flex justify-center items-center animate__animated animate__fadeInRight">
-          <div className="relative rounded-xl shadow-lg overflow-hidden">
-            <img
-              src="https://i.ibb.co.com/CQ7h5tx/Alaskan-Glacier-Hiking.jpg"
-              alt="Adventure Illustration"
-              className="rounded-xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-              <p className="text-sm mt-2">
-                Discover eco-friendly trips that you'll never forget.
-              </p>
-            </div>
+        <div className="relative flex justify-center items-center animate__animated animate__fadeInRight rounded-xl">
+          <div className="relative rounded-xl shadow-lg overflow-hidden object-cover h-full">
+            <Swiper
+              className="object-cover h-full"
+              modules={[Navigation, Pagination, Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              spaceBetween={20}
+              slidesPerView={1}
+              speed={1200}
+            >
+              <SwiperSlide className="relative object-cover h-full">
+                <img
+                  src="https://i.ibb.co.com/CQ7h5tx/Alaskan-Glacier-Hiking.jpg"
+                  alt="Adventure Illustration"
+                  className="rounded-xl object-cover h-full"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
+                  <p className="text-sm mt-2">
+                    Discover eco-friendly trips that you'll never forget.
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <img
+                  src="https://i.ibb.co.com/tYB210N/Amazon-Rainforest-Expedition.jpg"
+                  alt="Adventure Illustration"
+                  className="rounded-xl object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
+                  <p className="text-sm mt-2">
+                    Discover eco-friendly trips that you'll never forget.
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <img
+                  src="https://i.ibb.co.com/NnPtZ2D/Great-Barrier-Reef-Snorkeling.jpg"
+                  alt="Adventure Illustration"
+                  className="rounded-xl object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
+                  <p className="text-sm mt-2">
+                    Discover eco-friendly trips that you'll never forget.
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <img
+                  src="https://i.ibb.co.com/g3vCk1K/Sahara-Desert-Camping.jpg"
+                  alt="Adventure Illustration"
+                  className="rounded-xl object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
+                  <p className="text-sm mt-2">
+                    Discover eco-friendly trips that you'll never forget.
+                  </p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <img
+                  src="https://i.ibb.co.com/6gqBGrT/Patagonia-Wildlife-Adventure.jpg"
+                  alt="Adventure Illustration"
+                  className="rounded-xl object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
+                  <p className="text-sm mt-2">
+                    Discover eco-friendly trips that you'll never forget.
+                  </p>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>
