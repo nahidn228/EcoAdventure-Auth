@@ -20,7 +20,7 @@ const ForgetPass = () => {
       });
   };
   return (
-    <div>
+    <div className="">
       <div className="flex items-center justify-center min-h-screen mt-10">
         <div className="card  w-full max-w-lg shrink-0 ">
           <form onSubmit={handleResetPass} className="card-body border-2 p-10">

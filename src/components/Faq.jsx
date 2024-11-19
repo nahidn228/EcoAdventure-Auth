@@ -5,9 +5,6 @@ import {
   FaQuestionCircle,
   FaUserFriends,
 } from "react-icons/fa";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -86,21 +83,21 @@ const Faq = () => {
 
   return (
     <>
-      <section className="max-w-6xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-8 items-center">
+      <section className=" py-8 px-4 grid lg:grid-cols-2 gap-8 items-center">
         {/* FAQ Section */}
         <div className="animate__animated animate__fadeInLeft">
-          <h2 className="text-4xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-6 text-center lg:text-left">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
             {/* First FAQ */}
             <div className="flex items-start space-x-4">
-              <FaQuestionCircle className="text-3xl text-teal-500 mt-1" />
+              <FaQuestionCircle className="text-lg sm:text-xl md:text-3xl text-teal-500 mt-1" />
               <div>
-                <h3 className="text-xl font-medium text-gray-700">
+                <h3 className="text-base md:text-lg lg:text-xl font-medium text-gray-700">
                   What is Echo-Adventure?
                 </h3>
-                <p className="text-gray-600 mt-2">
+                <p className="text-gray-600 mt-2 text-sm md:text-base">
                   Echo-Adventure is a platform offering guided eco-friendly
                   adventures, connecting travelers to sustainable travel
                   options.
@@ -110,12 +107,12 @@ const Faq = () => {
 
             {/* Second FAQ */}
             <div className="flex items-start space-x-4">
-              <FaLeaf className="text-3xl text-green-500 mt-1" />
+              <FaLeaf className="text-lg sm:text-xl md:text-3xl text-green-500 mt-1" />
               <div>
-                <h3 className="text-xl font-medium text-gray-700">
+                <h3 className="text-base md:text-lg lg:text-xl font-medium text-gray-700">
                   Are your trips environmentally friendly?
                 </h3>
-                <p className="text-gray-600 mt-2">
+                <p className="text-gray-600 mt-2 text-sm md:text-base">
                   Yes! We partner with local communities and ensure minimal
                   environmental impact by promoting sustainable practices.
                 </p>
@@ -124,12 +121,12 @@ const Faq = () => {
 
             {/* Third FAQ */}
             <div className="flex items-start space-x-4">
-              <FaGlobe className="text-3xl text-blue-500 mt-1" />
+              <FaGlobe className="text-lg sm:text-xl md:text-3xl text-blue-500 mt-1" />
               <div>
-                <h3 className="text-xl font-medium text-gray-700">
+                <h3 className="text-base md:text-lg lg:text-xl font-medium text-gray-700">
                   Can I choose international destinations?
                 </h3>
-                <p className="text-gray-600 mt-2">
+                <p className="text-gray-600 mt-2 text-sm md:text-base">
                   Absolutely! Echo-Adventure offers curated trips to unique
                   destinations worldwide.
                 </p>
@@ -138,12 +135,12 @@ const Faq = () => {
 
             {/* Fourth FAQ */}
             <div className="flex items-start space-x-4">
-              <FaUserFriends className="text-3xl text-indigo-500 mt-1" />
+              <FaUserFriends className="text-lg sm:text-xl md:text-3xl text-indigo-500 mt-1" />
               <div>
-                <h3 className="text-xl font-medium text-gray-700">
+                <h3 className="text-base md:text-lg lg:text-xl font-medium text-gray-700">
                   Can I travel with a group?
                 </h3>
-                <p className="text-gray-600 mt-2">
+                <p className="text-gray-600 mt-2 text-sm md:text-base">
                   Yes! We provide group packages and private tours for an
                   unforgettable experience with friends or family.
                 </p>
@@ -154,95 +151,21 @@ const Faq = () => {
 
         {/* Image Section */}
         <div className="relative flex justify-center items-center animate__animated animate__fadeInRight rounded-xl">
-          <div className="relative rounded-xl shadow-lg overflow-hidden object-cover h-full">
-            <Swiper
-              className="object-cover h-full"
-              modules={[Navigation, Pagination, Autoplay]}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              loop={true}
-              spaceBetween={20}
-              slidesPerView={1}
-              speed={1200}
-            >
-              <SwiperSlide className="relative object-cover h-full">
-                <img
-                  src="https://i.ibb.co.com/CQ7h5tx/Alaskan-Glacier-Hiking.jpg"
-                  alt="Adventure Illustration"
-                  className="rounded-xl object-cover h-full"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-                  <p className="text-sm mt-2">
-                    Discover eco-friendly trips that you'll never forget.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://i.ibb.co.com/tYB210N/Amazon-Rainforest-Expedition.jpg"
-                  alt="Adventure Illustration"
-                  className="rounded-xl object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-                  <p className="text-sm mt-2">
-                    Discover eco-friendly trips that you'll never forget.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://i.ibb.co.com/NnPtZ2D/Great-Barrier-Reef-Snorkeling.jpg"
-                  alt="Adventure Illustration"
-                  className="rounded-xl object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-                  <p className="text-sm mt-2">
-                    Discover eco-friendly trips that you'll never forget.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://i.ibb.co.com/g3vCk1K/Sahara-Desert-Camping.jpg"
-                  alt="Adventure Illustration"
-                  className="rounded-xl object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-                  <p className="text-sm mt-2">
-                    Discover eco-friendly trips that you'll never forget.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://i.ibb.co.com/6gqBGrT/Patagonia-Wildlife-Adventure.jpg"
-                  alt="Adventure Illustration"
-                  className="rounded-xl object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">Plan Your Adventure</h3>
-                  <p className="text-sm mt-2">
-                    Discover eco-friendly trips that you'll never forget.
-                  </p>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+          <div className="relative rounded-xl shadow-lg overflow-hidden w-full">
+            <img
+              src="https://i.ibb.co/CQ7h5tx/Alaskan-Glacier-Hiking.jpg"
+              alt="Adventure Illustration"
+              className="rounded-xl object-cover w-full h-60 sm:h-80 md:h-96"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-lg md:text-xl font-bold">
+                Plan Your Adventure
+              </h3>
+              <p className="text-sm mt-2">
+                Discover eco-friendly trips that you'll never forget.
+              </p>
+            </div>
           </div>
         </div>
       </section>

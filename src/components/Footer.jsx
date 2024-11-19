@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 ">
       <footer className="bg-gradient-to-r from-green-800 to-teal-700 text-white py-10">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 px-5">
           {/* Logo and Mission */}

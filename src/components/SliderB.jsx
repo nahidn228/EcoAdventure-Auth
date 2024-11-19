@@ -1,27 +1,27 @@
 /* eslint-disable react/prop-types */
 import {
-    A11y,
-    Autoplay,
-    Navigation,
-    Pagination,
-    Scrollbar,
-  } from "swiper/modules";
-  
-  import { Swiper, SwiperSlide } from "swiper/react";
-  
-  import "swiper/css";
-  import "swiper/css/autoplay";
-  import "swiper/css/navigation";
-  import "swiper/css/pagination";
-  import "swiper/css/scrollbar";
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { Snowfall } from "react-snowfall";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const SliderB = ({ data }) => {
   return (
     <div className="mb-10">
-       <Snowfall snowflakeCount={100} />
+      <Snowfall snowflakeCount={100} />
       <Swiper
-        className="w-11/12 mx-auto lg:h-[800px] mt-10"
+        className="w-11/12 mx-auto lg:h-[700px] object-cover mt-10"
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         autoplay={{
           delay: 3000,
@@ -55,16 +55,24 @@ const SliderB = ({ data }) => {
                   Eco Friendly Features:
                 </p>
                 {item.ecoFriendlyFeatures?.map((feature, idx) => (
-                  <p key={idx} className="text-gray-800 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span> {feature}
+                  <p
+                    key={idx}
+                    className="text-gray-800 flex items-center gap-2"
+                  >
+                    <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>{" "}
+                    {feature}
                   </p>
                 ))}
                 <p className="text-lg font-semibold text-gray-800 mt-6">
                   Special Instructions:
                 </p>
                 {item.specialInstructions?.map((instruction, idx) => (
-                  <p key={idx} className="text-gray-800 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 bg-blue-500 rounded-full"></span> {instruction}
+                  <p
+                    key={idx}
+                    className="text-gray-800 flex items-center gap-2"
+                  >
+                    <span className="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>{" "}
+                    {instruction}
                   </p>
                 ))}
               </div>

@@ -1,5 +1,6 @@
 import "animate.css";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import {
   FaCheckCircle,
   FaClock,
@@ -9,10 +10,9 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router-dom";
+import { Snowfall } from "react-snowfall";
 import Footer from "../components/Footer";
 import NavBar from "./../components/NavBar";
-import { Helmet } from "react-helmet";
-import { Snowfall } from "react-snowfall";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -62,8 +62,8 @@ const CardDetails = () => {
   } = experience;
 
   return (
-    <div>
-       <Snowfall snowflakeCount={100} />
+    <div className="w-11/12 mx-auto">
+      <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>{`${categoryName} - Eco-Adventure`}</title>

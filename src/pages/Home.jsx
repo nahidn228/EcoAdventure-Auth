@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Outlet, useLoaderData } from "react-router-dom";
+import { Snowfall } from "react-snowfall";
 import Adventure from "../components/Adventure";
 import Faq from "../components/Faq";
 import SliderB from "../components/SliderB";
-import { Snowfall } from "react-snowfall";
 
 const Home = () => {
   const data = useLoaderData();
@@ -16,8 +16,8 @@ const Home = () => {
 
   console.log(experience);
   return (
-    <div>
-       <Snowfall snowflakeCount={100} />
+    <div className="">
+      <Snowfall snowflakeCount={100} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home - Eco-Adventure</title>

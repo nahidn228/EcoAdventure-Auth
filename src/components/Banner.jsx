@@ -12,7 +12,7 @@ const Banner = () => {
 
   return (
     <div
-      className="relative w-full bg-cover bg-center h-96 flex justify-center items-center"
+      className="relative bg-cover bg-center h-96 flex justify-center items-center"
       style={{
         backgroundImage:
           "url(https://i.ibb.co.com/tYB210N/Amazon-Rainforest-Expedition.jpg)",

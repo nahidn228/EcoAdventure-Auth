@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../provider/AuthProvider";
 import { Snowfall } from "react-snowfall";
+import { AuthContext } from "../provider/AuthProvider";
 
 const UpdateInfo = () => {
   const { updateUser } = useContext(AuthContext);
@@ -24,8 +24,8 @@ const UpdateInfo = () => {
       });
   };
   return (
-    <div>
-       <Snowfall snowflakeCount={100} />
+    <div className="">
+      <Snowfall snowflakeCount={100} />
       <div className="flex items-center justify-center min-h-screen mt-10">
         <div className="card  w-full max-w-lg shrink-0 ">
           <form
