@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 
 const UpdateInfo = () => {
-  const { updateUser, setUser } = useContext(AuthContext);
+  const { updateUser } = useContext(AuthContext);
   const handleUpdateProfile = (e) => {
     e.preventDefault();
 

@@ -14,6 +14,7 @@ import MyProfile from "../pages/MyProfile";
 import SignUp from "../pages/SignUp";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import UpdateInfo from "../components/UpdateInfo";
+import ForgetPass from "../components/ForgetPass";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/updateInfo",
         element: <UpdateInfo></UpdateInfo>,
+      },
+      {
+        path: "/forgetPassword",
+        element: <ForgetPass></ForgetPass>,
       },
       {
         path: "/myProfile",

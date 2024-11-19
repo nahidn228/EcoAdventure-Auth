@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-  const { signInUser, setUser, signInWithGoogle } = useContext(AuthContext);
+  const { signInUser, setUser, signInWithGoogle,setSendEmail } = useContext(AuthContext);
   const [err, setErr] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -15,6 +15,9 @@ const Login = () => {
 
     const email = form.email.value;
     const password = form.password.value;
+    //send email to forget password route
+    setSendEmail(email)
+    
 
     console.log(email, password);
 
@@ -93,12 +96,12 @@ const Login = () => {
                 </label>
               </div>
               <label className="label">
-                <a
-                  href="#"
+                <Link
+                  to="/forgetPassword"
                   className="label-text-alt link link-hover font-semibold text-sm"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
           </div>
