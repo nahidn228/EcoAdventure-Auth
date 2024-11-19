@@ -4,6 +4,7 @@ import navImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
 const NavBar = () => {
   const { user, signOutUser } = useContext(AuthContext);
+
   const navLinks = (
     <>
       <li>
@@ -142,7 +143,7 @@ const NavBar = () => {
           <div className="relative inline-block group">
             {/* User img */}
             <img
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full object-cover"
               src={user?.photoURL}
               alt=""
             />

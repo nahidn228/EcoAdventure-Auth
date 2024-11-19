@@ -16,12 +16,11 @@ const MyProfile = () => {
 
   return (
     <div>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mt-10">
         <div className="text-center mb-8">
           {/* Welcome Title */}
           <h1 className="text-4xl font-semibold text-gray-700 animate__animated animate__fadeInUp">
-            Welcome,{" "}
-            {user && user?.displayName ? <p>{user?.displayName}</p> : ""}
+            {user && user?.displayName ? <p>{user?.displayName}, Your Eco-Adventure Profile</p>  : ""}
           </h1>
         </div>
 
@@ -36,7 +35,7 @@ const MyProfile = () => {
                 <img
                   src={user.photoURL || "https://via.placeholder.com/150"}
                   alt="User"
-                  className="w-32 h-32 rounded-full border-4 border-blue-500 animate__animated animate__zoomIn"
+                  className="object-cover w-32 h-32 rounded-full border-4 border-blue-500 animate__animated animate__zoomIn"
                 />
                 {/* User icon as fallback if no image */}
                 {!user.photoURL && (
