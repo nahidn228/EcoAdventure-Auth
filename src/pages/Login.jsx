@@ -55,6 +55,7 @@ const Login = () => {
         setUser(result.user);
         navigate(location?.state ? location.state : "/");
         console.log(result.user);
+        toast.success(`Successfully Sign-in with Google in Eco-Adventure ! 🎉`);
       })
       .catch((err) => {
         console.log(err.code);

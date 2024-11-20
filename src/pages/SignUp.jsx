@@ -10,7 +10,8 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const { createNewUser, setUser, updateUser } = useContext(AuthContext);
+  const { createNewUser, setUser, updateUser, signInWithGoogle } =
+    useContext(AuthContext);
 
   const [showPass, setShowPass] = useState(false);
   const [err, setErr] = useState({});
@@ -78,6 +79,20 @@ const SignUp = () => {
       });
 
     console.log({ name, photoUrl, email, password, confirmPassword });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        navigate(location?.state ? location.state : "/");
+        console.log(result.user);
+        toast.success(`Successfully Sign-up with Google in Eco-Adventure ! 🎉`);
+      })
+      .catch((err) => {
+        console.log(err.code);
+        setUser(null);
+      });
   };
   return (
     <>
@@ -222,7 +237,10 @@ const SignUp = () => {
           </form>
           <div className="p-10">
             <div className="divider font-semibold my-6">Or</div>
-            <button className="btn btn-outline btn-circle w-full mb-6 flex">
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn btn-outline btn-circle w-full mb-6 flex"
+            >
               <FcGoogle />
               Continue with Google
             </button>
